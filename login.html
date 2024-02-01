@@ -46,6 +46,20 @@ loginForm.password.$dirty">Password is required.</span>
 </div> 
 19 
  
-<script src= “login.js”> </script> 
+<script src= “Program8.js”> </script> 
+</body> 
+</html>
+ 
+<script > 
+  var app = angular.module('myApp', []); 
+    app.controller('LoginController', function ($scope) { 
+        $scope.user = { username: '', password: '' }; 
+        $scope.isLoggedIn = false; 
+        $scope.login = function ()  {
+            $scope.isLoggedIn = true; 
+        }; 
+    }); 
+
+</script> 
 </body> 
 </html>
