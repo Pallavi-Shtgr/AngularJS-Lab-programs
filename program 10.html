@@ -45,7 +45,13 @@
          } 
      }; 
 
-  
+     $scope.removeItem = function (item) { 
+         var index = $scope.items.indexOf(item); 
+         if (index !== -1) { 
+             $scope.items.splice(index, 1); 
+         } 
+     }; 
+ });
  
 </script> 
 </body> 
