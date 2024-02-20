@@ -9,9 +9,7 @@
  
 <div ng-controller="ItemController"> 
     <h2>Item Collection</h2> 
- 
     <p>Total number of items: {{ items.length }}</p> 
- 
     <ul> 
         <li ng-repeat="item in items"> 
             {{ item.name }} 
@@ -25,10 +23,10 @@
         <button ng-click="addItem()">Add New Item</button> 
     </div> 
 </div> 
+
 <script>
     var app = angular.module('myApp', []); 
- 
- app.controller('ItemController', function ($scope) { 
+    app.controller('ItemController', function ($scope) { 
      // Default items 
      $scope.items = [ 
          { name: 'Apple'}, 
