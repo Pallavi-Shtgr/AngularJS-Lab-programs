@@ -1,4 +1,4 @@
-// Program 12: Create an AngularJS application that displays the date by using date filter parameters 
+<!-- Program 12: Create an AngularJS application that displays the date by using date filter parameters  -->
 
 <!DOCTYPE html> 
 <html lang="en"> 
@@ -28,4 +28,17 @@ HH:mm:ss)</option>
     <p>Selected Date Format: {{ selectedFormat }}</p> 
     <p>Formatted Date: {{ formattedDate }}</p> 
 </div> 
-<script src= “program 12.js”></script>
+<script> var app = angular.module('myApp', []); 
+    app.controller('myController', function ($scope, $filter) { 
+        $scope.selectedFormat = 'fullDate'; // Default date format 
+        $scope.updateDate = function () { 
+            var currentDate = new Date(); 
+            $scope.formattedDate = $filter('date')(currentDate, $scope.selectedFormat); 
+        }; 
+        // Initial date update 
+        $scope.updateDate(); 
+    });
+    </script>
+
+    </body>
+</html>
