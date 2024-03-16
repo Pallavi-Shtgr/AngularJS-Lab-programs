@@ -1,12 +1,4 @@
-<!-- Program 8: Develop AngularJS program to create a login form, with validation 
-for the username and password fields. for a login form with validation for the username and password. The password is required to 
-be alphanumeric and 8 characters long. The form uses AngularJS validation with the required 
-attribute for both the username and password fields. The password field also uses the ng
-pattern attribute to enforce the alphanumeric requirement and a minimum length of 8 
-characters. Error messages are displayed based on the validation status. The "Login" button is 
-disabled until the form is valid. The ng-click directive triggers the login() function, which can 
-contain the actual login logic. For simplicity, it just sets isLoggedIn to true in this example.  -->
-
+ 
 <!DOCTYPE html> 
 <html> 
 <head> 
@@ -24,7 +16,7 @@ contain the actual login logic. For simplicity, it just sets isLoggedIn to true 
         <input type="text" ng-model="user.username" name="username" required> 
         <span ng-show="loginForm.username.$error.required &&    
 loginForm.username.$dirty">Username is required.</span> 
-        <br> 
+        <br>  
  
         <label>Password:</label> 
         <input type="password" ng-model="user.password" name="password" ng
@@ -44,22 +36,7 @@ loginForm.password.$dirty">Password is required.</span>
         <p>Login successful! Welcome, {{ user.username }}!</p> 
     </div> 
 </div> 
-19 
  
 <script src= “Program8.js”> </script> 
 </body> 
-</html>
- 
-<script> 
-    var app = angular.module('myApp', []); 
-      app.controller('LoginController', function ($scope) { 
-          $scope.user = { username: '', password: '' }; 
-          $scope.isLoggedIn = false; 
-          $scope.login = function ()  {
-              $scope.isLoggedIn = true; 
-          }; 
-      }); 
-  
-</script>
-</body> 
-</html>
+</html> 
