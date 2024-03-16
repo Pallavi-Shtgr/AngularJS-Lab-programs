@@ -21,12 +21,13 @@
   </tr> 
  </thead> 
  <tbody> 
+
   <tr ng-repeat="user in users"> 
    <td>{{ user.name }}</td> 
    <td>{{ user.email }}</td> 
    <td> 
-      <button ng-click="editUser(user)">Edit</button> 
-      <button ng-click="deleteUser(user)">Delete</button> 
+      <button ng-click="editUser(user)"> Edit</button> 
+      <button ng-click="deleteUser(user)"> Delete</button> 
    </td> 
   </tr> 
  </tbody> 
